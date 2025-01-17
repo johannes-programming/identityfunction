@@ -23,7 +23,7 @@ keywords = []
 name = "identityfunction"
 readme = "README.rst"
 requires-python = ">=3.8"
-version = "1.0.1+local"
+version = "1.0.1"
 
 [project.license]
 file = "LICENSE.txt"

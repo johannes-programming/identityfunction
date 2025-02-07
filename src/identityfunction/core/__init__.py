@@ -3,6 +3,6 @@ from typing import *
 __all__ = ["identityfunction"]
 
 
-def identityfunction(value: object, /) -> object:
+def identityfunction(value: Any, /) -> Any:
     "This function returns the value given to it."
     return value

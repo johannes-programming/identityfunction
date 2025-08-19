@@ -21,7 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "click>=8.2.1,<9",
-    "preparse>=0.1.6,<1",
+    "preparse>=0.1.6,<2",
 ]
 description = "This project provides the identity function."
 keywords = []

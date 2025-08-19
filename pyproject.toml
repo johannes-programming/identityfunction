@@ -6,6 +6,7 @@ requires = [
 
 [project]
 authors = [
+    { email = "johannes.programming@gmail.com", name = "Johannes" },
     { email = "johannes-programming@mailfence.com", name = "Johannes" },
 ]
 classifiers = [
@@ -19,13 +20,16 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Typing :: Typed",
 ]
-dependencies = []
+dependencies = [
+    "click>=8.2.1",
+    "preparse>=0.1.6",
+]
 description = "This project provides the identity function."
 keywords = []
 name = "identityfunction"
 readme = "README.rst"
-requires-python = ">=3.8"
-version = "1.0.1+local.4"
+requires-python = ">=3.11"
+version = "1.0.1+local.5"
 
 [project.license]
 file = "LICENSE.txt"

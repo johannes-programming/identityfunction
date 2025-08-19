@@ -20,7 +20,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "click>=8.2.1",
+    "click>=8.2.1,<9",
     "preparse>=0.1.6",
 ]
 description = "This project provides the identity function."

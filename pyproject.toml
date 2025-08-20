@@ -1,7 +1,7 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools>=61.0",
+    "setuptools>=61.0,<62",
 ]
 
 [project]
@@ -20,7 +20,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "click>=8.2.1,<9",
+    "click>=8.2,<9",
     "preparse>=0.1.6,<2",
 ]
 description = "This project provides the identity function."

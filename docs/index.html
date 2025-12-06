@@ -5,7 +5,16 @@
     </head>
     <body>
         <dl class="heading0">
-            <dt>identityfunction</dt>
+            <dt>
+                <a>identityfunction</a>
+                <p>
+                    Version: 
+                    <select id="version">
+                        <option>1.0.1</option>
+                        <option>1.0.2</option>
+                        <option>1.0.3</option>
+                    </select>
+                </p></dt>
             <dd>
                 <dl class="heading1">
                     <dt id="intro">Introduction</dt>
@@ -43,11 +52,36 @@
     </body>
     <script src="https://www.johannes-programming.online/script.js"></script>
     <script>
+        function updateVersionVisibilityElement(el){
+            const select = document.getElementById('version');
+            if (select === null){return;}
+            const currentVersion = select.value;
+            const versionsAttr = el.getAttribute('version') || '';
+            const versions = versionsAttr.split(/\s+/).filter(Boolean);
+            const shouldShow = versions.includes(currentVersion);
+            if (shouldShow) {el.classList.remove('hidden');} 
+            else {el.classList.add('hidden');}
+        }
+        function updateVersionVisibility() {
+            const versionedElements = document.querySelectorAll('[version]');
+            versionedElements.forEach(updateVersionVisibilityElement);
+        }
+        function updateVersionVisibilityLoad() {
+            const select = document.getElementById('version');
+            if (select === null){return;}
+            select.addEventListener('change', updateVersionVisibility);
+            updateVersionVisibility();
+        }
+        function setupVersionVisibility() {
+            document.addEventListener('DOMContentLoaded', updateVersionVisibilityLoad);
+            updateVersionVisibilityLoad();
+        }
         setupLinksCorpus("identityfunction");
         setupInstallCorpus("identityfunction");
         setupTestingCorpus("identityfunction");
         setupLicenseCorpus("identityfunction");
         setupImpressumCorpus("identityfunction");
         addMetaAndLinkTags();
+        setupVersionVisibility();
     </script>
 </html>

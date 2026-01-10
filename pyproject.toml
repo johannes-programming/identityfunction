@@ -1,7 +1,7 @@
 [build-system]
 build-backend = "setuptools.build_meta"
 requires = [
-    "setuptools>=61.0",
+    "setuptools>=64.0",
 ]
 
 [project]
@@ -21,6 +21,7 @@ classifiers = [
 ]
 dependencies = [
     "click>=8.2,<9",
+    "funclibs>=0.1,<1",
     "preparse>=0.1.6,<2",
 ]
 description = "This project provides the identity function."
@@ -28,7 +29,7 @@ keywords = []
 name = "identityfunction"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.0.3"
+version = "1.0.4"
 
 [project.license]
 file = "LICENSE.txt"

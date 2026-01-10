@@ -2,13 +2,12 @@ from typing import *
 
 import click
 import preparse
+from funclibs.elementary.identity import identity
 
 __all__ = ["identityfunction", "main"]
 
 
-def identityfunction(value: Any, /) -> Any:
-    "This function returns the value given to it."
-    return value
+identityfunction = identity
 
 
 @preparse.PreParser().click()

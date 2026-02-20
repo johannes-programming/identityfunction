@@ -12,7 +12,8 @@
                     <select id="version">
                         <option selected>1.0</option>
                     </select>
-                </p></dt>
+                </p>
+            </dt>
             <dd>
                 <dl class="heading1">
                     <dt id="intro">Introduction</dt>
@@ -48,13 +49,20 @@
             </dd>
         </dl>
     </body>
-    <script src="https://www.johannes-programming.online/script.js"></script>
-    <script>
-        setupLinksCorpus("identityfunction");
-        setupInstallCorpus("identityfunction");
-        setupTestingCorpus("identityfunction");
-        setupLicenseCorpus("identityfunction");
+    <script type="module">
+        import {
+            setupImpressumCorpus,
+            setupInstallCorpus,
+            setupLicenseCorpus,
+            setupLinksCorpus,
+            setupTestingCorpus,
+            addMetaAndLinkTags,
+        } from "https://www.johannes-programming.online/main.js";
         setupImpressumCorpus("identityfunction");
+        setupInstallCorpus("identityfunction");
+        setupLicenseCorpus("identityfunction");
+        setupLinksCorpus("identityfunction");
+        setupTestingCorpus("identityfunction");
         addMetaAndLinkTags();
     </script>
 </html>

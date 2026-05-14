@@ -1,12 +1,14 @@
-from typing import *
+from typing import TypeVar
 
 import click
 import preparse
 
 __all__ = ["identityfunction", "main"]
 
+Value = TypeVar("Value")
 
-def identityfunction(value: Any, /) -> Any:
+
+def identityfunction(value: Value, /) -> Value:
     "This function returns the value given to it."
     return value
 

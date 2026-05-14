@@ -1,5 +1,5 @@
 import unittest
-from typing import *
+from typing import Self
 
 from identityfunction.core import identityfunction
 

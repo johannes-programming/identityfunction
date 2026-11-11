@@ -25,8 +25,8 @@ This project is strictly typed with ``mypy``.
 Features
 --------
 
-``identityfunction.identityfunction(value: Value, /) -> Value``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``identityfunction.identityfunction[Value](value: Value, /) -> Value``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This function returns the value given to it.
 

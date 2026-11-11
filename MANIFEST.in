@@ -1,2 +1,4 @@
 recursive-include docs *.rst
-recursive-include src/identityfunction *.toml
+recursive-include src *.toml
+recursive-include tests *.toml
+include run_tests.py

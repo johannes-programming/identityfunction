@@ -18,10 +18,7 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Typing :: Typed",
 ]
-dependencies = [
-    "click>=8.2,<9",
-    "preparse>=1.1,<2",
-]
+dependencies = []
 description = "This project provides the identity function."
 keywords = []
 license = "MIT"
@@ -31,7 +28,7 @@ license-files = [
 name = "identityfunction"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "1.1.4.post0"
+version = "1.2.0"
 
 [project.urls]
 Download = "https://pypi.org/project/identityfunction/#files"

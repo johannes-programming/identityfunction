@@ -5,36 +5,49 @@ requires = [
 ]
 
 [project]
-authors = [
-    { email = "johannes.programming@gmail.com", name = "Johannes" },
+name = "identityfunction"
+version = "1.2.0.post0"
+description = "This project provides the identity function."
+readme = "README.rst"
+keywords = []
+license = "MIT"
+license-files = [
+    "LICENSE.txt",
 ]
+authors = [
+    { name = "Johannes", email = "johannes.programming@gmail.com" },
+]
+requires-python = ">=3.11"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
     "Typing :: Typed",
 ]
 dependencies = []
-description = "This project provides the identity function."
-keywords = []
-license = "MIT"
-license-files = [
-    "LICENSE.txt",
-]
-name = "identityfunction"
-readme = "README.rst"
-requires-python = ">=3.11"
-version = "1.2.0"
+urls.Download = "https://pypi.org/project/identityfunction/#files"
+urls.Index = "https://pypi.org/project/identityfunction/"
+urls.Source = "https://github.com/johannes-programming/identityfunction/"
+urls.Website = "https://identityfunction.johannes-programming.online/"
 
-[project.urls]
-Download = "https://pypi.org/project/identityfunction/#files"
-Index = "https://pypi.org/project/identityfunction/"
-Source = "https://github.com/johannes-programming/identityfunction/"
-Website = "https://identityfunction.johannes-programming.online/"
+[tool.ruff]
+line-length = 79
+lint.select = [
+    "I",
+]
+
+[tool.pyproject-fmt]
+indent = 4
+keep_full_version = true
+max_supported_python = "3.15"
 
 [tool.mypy]
 files = [

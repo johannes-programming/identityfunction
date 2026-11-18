@@ -87,7 +87,7 @@ pypi: dist upload
 
 pyproject-fmt: py311
 	conda run -n py311 pip install "pyproject-fmt<3,>=2.30";
-	conda run -n py311 pyproject-fmt pyproject.toml || conda run -n py311 pyproject-fmt --check pyproject.toml;
+	conda run -n py311 pyproject-fmt pyproject.toml >/dev/null 2>/dev/null || conda run -n py311 pyproject-fmt --check pyproject.toml;
 
 rebase:
 	git rebase --empty=drop --interactive $(PARAMS);

@@ -3,6 +3,7 @@ from __future__ import annotations
 __all__: list[str] = ["main", "parse_args", "run"]
 
 import argparse
+import io
 import logging
 import sys
 import tomllib
@@ -43,15 +44,20 @@ def parse_args(args: abc.Iterable[str] | None = None) -> argparse.Namespace:
 
 
 def run(project: Path, /) -> None:
+    data: dict[str, Any]
+    instream: io.BufferedReader
+    outstream: io.BufferedWriter
+    pyproject: Path
     pyproject = project / "pyproject.toml"
     with open(pyproject, "rb") as instream:
         data = tomllib.load(instream)
     data["project"] = run_project(data["project"])
     with open(pyproject, "wb") as outstream:
-        data = tomli_w.dump(data, outstream)
+        tomli_w.dump(data, outstream)
 
 
 def run_dependency(dependency: str) -> str:
+    req: Requirement
     req = Requirement(dependency)
     req.name = canonicalize_name(req.name)
     return str(req)

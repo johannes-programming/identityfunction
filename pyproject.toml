@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "identityfunction"
-version = "1.2.0.post0"
+version = "1.2.0.post1"
 description = "This project provides the identity function."
 readme = "README.rst"
 keywords = []
@@ -41,7 +41,16 @@ urls.Website = "https://identityfunction.johannes-programming.online/"
 [tool.ruff]
 line-length = 79
 lint.select = [
+    "ANN001",
+    "ANN002",
+    "ANN003",
+    "F",
     "I",
+    "PLE0604",
+    "PLE0605",
+    "RUF022",
+    "RUF068",
+    "UP035",
 ]
 
 [tool.pyproject-fmt]
